@@ -16,7 +16,7 @@ class Welcomescreen extends StatelessWidget {
         flexibleSpace: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: Image.asset(
-            "assets/images/image 1.jpg",
+            "assets/images/logos/image 1.jpg",
             height: 57,
             width: double.infinity,
           ),
@@ -39,7 +39,7 @@ class Welcomescreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 154, left: 72, right: 72),
-              child: Image.asset("assets/images/image (2) 1.jpg"),
+              child: Image.asset("assets/images/image (2) 1.jpg",fit: BoxFit.fill,),
             ),
             Container(
               padding: EdgeInsets.only(right: 35, left: 35, top: 42),

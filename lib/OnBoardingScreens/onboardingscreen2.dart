@@ -15,7 +15,7 @@ class OnboardingScreen2 extends StatelessWidget {
         flexibleSpace: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: Image.asset(
-            "assets/images/image 1.jpg",
+            "assets/images/logos/image 1.jpg",
             height: 57,
             width: double.infinity,
           ),
@@ -39,7 +39,7 @@ class OnboardingScreen2 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(
                   top: 20, left: 116, right: 116, bottom: 44),
-              child: Image.asset("assets/images/image (3) (1).jpg",height: 166,width: 166,),
+              child: Image.asset("assets/images/image (3) (1).jpg",height: 166,width: 166,fit: BoxFit.fill,),
             ),
             Padding(
               padding: const EdgeInsets.only(right: 50, left: 50),
@@ -78,18 +78,20 @@ class OnboardingScreen2 extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30, top: 54),
+              padding: const EdgeInsets.only(right: 30, left: 30, top: 54,),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "LoginPage");
+                },
                 child: Text(
-                  "Next",
+                  "Get Started",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w600),
                 ),
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xffEB8125),
+                    backgroundColor: Color(0xff004673),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16))),
                     fixedSize: Size(327, 56)),
@@ -110,11 +112,13 @@ class OnboardingScreen2 extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+                      },
                       child: Text(
                         "Sign In",
                         style: TextStyle(
-                          color: Color(0xff004673),
+                          color: Color(0xffEB8125),
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                         ),

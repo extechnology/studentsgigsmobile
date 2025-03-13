@@ -61,7 +61,10 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           opacity: _fadeAnimation,
           child: SlideTransition(
             position: _positionAnimation,
-            child: Image.asset("assets/images/Property 1=Variant2.jpg"),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 374,bottom: 373),
+              child: Image.asset("assets/images/logos/image 1.jpg",fit: BoxFit.fill,),
+            ),
           ),
         ),
       ),
