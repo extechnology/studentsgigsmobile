@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:gigs/classes/benefitcls.dart';
 
-import '../classes/benefitcls.dart';
-
-class OnboardingScreen1 extends StatelessWidget {
-  const OnboardingScreen1({super.key});
+class OnboardingScreen2 extends StatelessWidget {
+  const OnboardingScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffF9F2ED),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffF9F2ED),
         //toolbarHeight: 149,
         flexibleSpace: Padding(
           padding: const EdgeInsets.only(top: 20),
@@ -35,12 +34,11 @@ class OnboardingScreen1 extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.only(
-                  top: 160, left: 116, right: 116, bottom: 44),
-              child: Image.asset("assets/images/image (4) (1) 2.jpg",width: 161,height: 161,fit: BoxFit.fill,),
+                  top: 20, left: 116, right: 116, bottom: 44),
+              child: Image.asset("assets/images/image (3) (1).jpg",height: 166,width: 166,fit: BoxFit.fill,),
             ),
             Padding(
               padding: const EdgeInsets.only(right: 50, left: 50),
@@ -49,47 +47,57 @@ class OnboardingScreen1 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   BenefitRow(
-                    leading: Icon(Icons.work, size: 28, color: Colors.black),
-                    title: "Find freelance gigs",
-                    subtitle: "Explore opportunities & earn",
+                    leading: CircleAvatar(
+                      backgroundColor: Color(0xffE3E3E3),
+                      child: Text("1"),
+                      radius: 22.5,
+                    ),
+                    title: "Create a profile, showcase your skills",
+                    subtitle: "",
                   ),
                   BenefitRow(
-                    leading: Icon(Icons.lightbulb_outline,
-                        size: 28, color: Colors.black),
-                    title: "Build your skills",
-                    subtitle: "Enhance your expertise & grow",
+                    leading: CircleAvatar(
+                      backgroundColor: Color(0xffE3E3E3),
+                      child: Text("2"),
+                      radius: 22.5,
+                    ),
+                    title: "Browse and apply for gigs that match your interests",
+                    subtitle: "",
                   ),
                   BenefitRow(
-                    leading:
-                        Icon(Icons.attach_money, size: 28, color: Colors.black),
-                    title: "Boost your income",
-                    subtitle: "Increase earnings & experience success",
+                    leading: CircleAvatar(
+                      backgroundColor: Color(0xffE3E3E3),
+                      child: Text("3"),
+                      radius: 22.5,
+                    ),
+                    title: "Work on and complete gigs to earn money and build your portfolio",
+                    subtitle: "",
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30, top: 54),
+              padding: const EdgeInsets.only(right: 30, left: 30, top: 54,),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "OnboardingScreen2");
+                  Navigator.pushNamed(context, "LoginPage");
                 },
                 child: Text(
-                  "Next",
+                  "Get Started",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w600),
                 ),
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xffEB8125),
+                    backgroundColor: Color(0xff004673),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16))),
                     fixedSize: Size(327, 56)),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(14.0),
+              padding: const EdgeInsets.all(14),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -103,11 +111,13 @@ class OnboardingScreen1 extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+                      },
                       child: Text(
                         "Sign In",
                         style: TextStyle(
-                          color: Color(0xff004673),
+                          color: Color(0xffEB8125),
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                         ),

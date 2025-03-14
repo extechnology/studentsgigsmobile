@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gigs/screens/OnBoardingScreens/onboardingscreen1.dart';
 
-import '../OnBoardingScreens/onboardingscreen1.dart';
 
 class Welcomescreen extends StatelessWidget {
   const Welcomescreen({super.key});
@@ -8,10 +8,10 @@ class Welcomescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffF9F2ED),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffF9F2ED),
         toolbarHeight: 64,
         flexibleSpace: Padding(
           padding: const EdgeInsets.only(top: 20),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gigs/screens/optionscreen.dart';
 import 'package:gigs/screens/welcomescreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -41,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const Welcomescreen()),
+        MaterialPageRoute(builder: (context) => const OptionScreen()),
       );
     });
   }
