@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/classes/textfield.dart';
+import 'package:gigs/SubClasses/textfield.dart';
 
 class EmpolyerProfile2 extends StatelessWidget {
   const EmpolyerProfile2({super.key});

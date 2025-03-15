@@ -4,9 +4,11 @@ import 'package:gigs/screens/Employer/OnboadEmployerProfiles/employerProfile2.da
 import 'package:gigs/screens/Employer/OnboadEmployerProfiles/employerProfile3.dart';
 import 'package:gigs/screens/OnBoardingScreens/onboardingscreen1.dart';
 import 'package:gigs/screens/OnBoardingScreens/onboardingscreen2.dart';
-import 'package:gigs/screens/Students/onboardProfile.dart';
-import 'package:gigs/screens/Students/onboardProfile2.dart';
-import 'package:gigs/screens/Students/onboardingProfile3.dart';
+import 'package:gigs/screens/Students/StudentProfileScreens/onboardProfile.dart';
+import 'package:gigs/screens/Students/StudentProfileScreens/onboardProfile2.dart';
+import 'package:gigs/screens/Students/StudentProfileScreens/onboardingProfile3.dart';
+import 'package:gigs/screens/Students/dashboeardscren.dart';
+import 'package:gigs/screens/Students/mygigs.dart';
 import 'package:gigs/screens/loginpage.dart';
 import 'package:gigs/screens/optionscreen.dart';
 import 'package:gigs/screens/register.dart';
@@ -36,10 +38,12 @@ class MyApp extends StatelessWidget {
         "OnboardProfile3": (context) => OnboardProfile3(),
         "EmployerProfile": (context)=> EmployerProfile(),
         "EmployerProfile2": (context)=> EmpolyerProfile2(),
-        "EmployerProfile3": (context)=> EmployerProfile3()
+        "EmployerProfile3": (context)=> EmployerProfile3(),
+        "DashBoard": (context)=> DashBoard(),
+        "MyGigs": (context)  => MyGigs()
       },
       debugShowCheckedModeBanner: false,
-      home: EmployerProfile(),
+      home: DashBoard(),
     );
   }
 }

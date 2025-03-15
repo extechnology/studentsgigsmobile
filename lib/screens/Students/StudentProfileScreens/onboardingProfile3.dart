@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/classes/textfield.dart';
+import 'package:gigs/SubClasses/textfield.dart';
 
 class OnboardProfile3 extends StatelessWidget {
   const OnboardProfile3({super.key});

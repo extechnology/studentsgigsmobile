@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gigs/screens/optionscreen.dart';
-import 'package:gigs/screens/welcomescreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

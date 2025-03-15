@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/classes/benefitcls.dart';
+import 'package:gigs/SubClasses/benefitcls.dart';
 
 class OnboardingScreen2 extends StatelessWidget {
   const OnboardingScreen2({super.key});
