@@ -21,9 +21,6 @@ class OnboardProfile3 extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
-                // blurRadius: 1,
-                // spreadRadius: 1,
-                //offset: Offset(1, 0),
               ),
             ],
           ),
@@ -37,7 +34,7 @@ class OnboardProfile3 extends StatelessWidget {
             ),
           ),
         ),
-        toolbarHeight: 161,
+        // toolbarHeight: 165,
         actions: [
           TextButton(
             onPressed: () {},
@@ -50,18 +47,18 @@ class OnboardProfile3 extends StatelessWidget {
             ),
           ),
         ],
-        flexibleSpace: Padding(
-          padding: const EdgeInsets.only(top: 121,left: 35),
-          child: Text("Job Type",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Color(0xff3F414E)),),
-        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 35, right: 35, top: 13),
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 13),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 13),
+                child: Text("Job Type",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Color(0xff3F414E)),),
+              ),
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -192,7 +189,7 @@ class OnboardProfile3 extends StatelessWidget {
         height: 56,
         child: FloatingActionButton(
           onPressed: () {
-            Navigator.pushNamed(context, "OnboardProfile2");
+            Navigator.pushNamed(context, "DashBoard");
           },
           child: Text(
             "Save",

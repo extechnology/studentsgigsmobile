@@ -12,9 +12,9 @@ class Welcomescreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Color(0xffF9F2ED),
-        toolbarHeight: 64,
+        toolbarHeight: 65,
         flexibleSpace: Padding(
-          padding: const EdgeInsets.only(top: 20),
+          padding: const EdgeInsets.only(top: 35),
           child: Image.asset(
             "assets/images/logos/image 1.jpg",
             height: 57,

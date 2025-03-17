@@ -23,6 +23,7 @@ class OptionScreen extends StatelessWidget {
               ),
             ),
           ),
+
           /// Foreground Layout (Transparent Container)
           Align(
             alignment: Alignment.topCenter,
@@ -36,7 +37,9 @@ class OptionScreen extends StatelessWidget {
                   /// Top Section (Welcome Text, Logo, Description)
                   Column(
                     children: [
-                      SizedBox(height: 91,),
+                      SizedBox(
+                        height: 91,
+                      ),
                       Text(
                         "Welcome to",
                         style: TextStyle(
@@ -45,15 +48,17 @@ class OptionScreen extends StatelessWidget {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      Image.asset("assets/images/logos/Property 1=Variant2.jpg"),
+                      Image.asset(
+                          "assets/images/logos/Property 1=Variant2.jpg"),
                       Padding(
-                        padding: const EdgeInsets.only(right: 16,left: 16),
+                        padding: const EdgeInsets.only(right: 16, left: 16),
                         child: RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
                             children: [
                               TextSpan(
-                                text: "Connecting students with the best gigs and companies with top student talent—quick, easy, and hassle-free! ",
+                                text:
+                                    "Connecting students with the best gigs and companies with top student talent—quick, easy, and hassle-free! ",
                                 style: TextStyle(
                                   color: Color(0xff000000),
                                   fontSize: 14,
@@ -64,7 +69,8 @@ class OptionScreen extends StatelessWidget {
                               ),
                               TextSpan(
                                 text: "🚀",
-                                style: TextStyle(fontSize: 18, color: Colors.red),
+                                style:
+                                    TextStyle(fontSize: 18, color: Colors.red),
                               ),
                             ],
                           ),
@@ -76,72 +82,99 @@ class OptionScreen extends StatelessWidget {
                   /// Middle Section (Empty Space for Background Image Visibility)
                   Expanded(child: SizedBox()),
 
-                  /// Bottom Section (Buttons)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 40),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Welcomescreen(),));
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xff004673), // Button background color
-                            fixedSize: Size(172, 172), // Fixed width and height
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16), // Optional: Rounded corners
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              bottom: 40, left: 8, right: 8),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Welcomescreen()));
+                            },
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: Size(MediaQuery.of(context).size.width/2, 172),
+                              backgroundColor: Color(0xff004673),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: MediaQuery.of(context).size.height *
+                                      0.02),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                      "assets/images/Ellipse 1498.jpg"),
+                                  radius: 30,
+                                ),
+                                Text(
+                                  "ExploreGigs",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              //SizedBox(height: 10,),
-                              CircleAvatar(backgroundImage: AssetImage("assets/images/Ellipse 1498.jpg"),radius: 30,),
-                              Text(textAlign: TextAlign.center,
-                                "ExploreGigs",
-                                style: TextStyle(
-                                  fontSize: 20, // Adjust text size
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.white, // Text color
-                                ),
-                              ),
-                            ],
-                          ),
                         ),
-                        SizedBox(width: 20),
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Welcomescreen(),));
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xffEB8125), // Button background color
-                            fixedSize: Size(172, 172), // Fixed width and height
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16), // Optional: Rounded corners
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              bottom: 40, left: 8, right: 8),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Welcomescreen()));
+                            },
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: Size(MediaQuery.of(context).size.width/2, 172),
+                              backgroundColor: Color(0xffEB8125),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: MediaQuery.of(context).size.height *
+                                      0.02),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage: AssetImage(
+                                      "assets/images/Ellipse 1497.jpg"),
+                                  radius: 30,
+                                ),
+                                Text(
+                                  "Find Student Talents",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              //SizedBox(height: 10,),
-                              CircleAvatar(backgroundImage: AssetImage("assets/images/Ellipse 1497.jpg"),radius: 30,),
-                              Text(textAlign: TextAlign.center,
-                                "Find Student Talents",
-                                style: TextStyle(
-                                  fontSize: 20, // Adjust text size
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.white, // Text color
-                                ),
-                              ),
-                            ],
-                          ),
                         ),
-                      ],
-                    ),
-                  ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),

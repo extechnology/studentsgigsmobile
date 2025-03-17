@@ -48,68 +48,68 @@ class OnboardProfile2 extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.only(right: 35,left: 35),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 13,bottom: 17,left: 34),
-              child: Text("Add your profile image",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            ),
-            CircleAvatar(
-              radius: 65,
-              backgroundImage: AssetImage("assets/images/Group 69.jpg",),
-              child: Align(
-                alignment: Alignment.bottomRight,
-                  child: Container(
-                    height: 41,
-                    width: 41,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xffEB8125),
-                    ),
-                      child: IconButton(onPressed: (){}, icon: Icon(Icons.mode_edit_outline_outlined),color: Colors.white,iconSize: 16,))),
-            ),
-            SizedBox(height: 30,),
-            Text("Portfolio/LinkedIn Profile",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            Padding(
-              padding: const EdgeInsets.only(top: 13,bottom: 29),
-              child: CustomTextFormField(
-                hintText: "Enter or paste your profile link",
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 17,left: 34),
+                child: Text("Add your profile image",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               ),
-            ),
-            Text("Available Work Hours",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            Padding(
-              padding: const EdgeInsets.only(top: 13,bottom: 29),
-              child: CustomTextFormField(
-                hintText: "Hours",
+              CircleAvatar(
+                radius: 65,
+                backgroundImage: AssetImage("assets/images/Group 69.jpg",),
+                child: Align(
+                  alignment: Alignment.bottomRight,
+                    child: Container(
+                      height: 41,
+                      width: 41,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xffEB8125),
+                      ),
+                        child: IconButton(onPressed: (){}, icon: Icon(Icons.mode_edit_outline_outlined),color: Colors.white,iconSize: 16,))),
               ),
-            ), Text("Available Work Period",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  width: 143,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 13,bottom: 29),
-                    child: CustomTextFormField(
-                      hintText: "DD/MM/YYYY",
+              SizedBox(height: 30,),
+              Text("Portfolio/LinkedIn Profile",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 29),
+                child: CustomTextFormField(
+                  hintText: "Enter or paste your profile link",
+                ),
+              ),
+              Text("Available Work Hours",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 29),
+                child: CustomTextFormField(
+                  hintText: "Hours",
+                ),
+              ), Text("Available Work Period",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 0, right: 4, top: 13, bottom: 29),
+                      child: CustomTextFormField(
+                        hintText: "DD/MM/YYYY",
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  width: 143,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 13,bottom: 29),
-                    child: CustomTextFormField(
-                      hintText: "DD/MM/YYYY",
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 4, right: 4, top: 13, bottom: 29),
+                      child: CustomTextFormField(
+                        hintText: "DD/MM/YYYY",
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              )
+            ],
+          ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

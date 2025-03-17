@@ -10,11 +10,11 @@ class OnboardingScreen1 extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xffF9F2ED),
       appBar: AppBar(
-        toolbarHeight: 64,
+        toolbarHeight: 65,
         backgroundColor: Color(0xffF9F2ED),
         //toolbarHeight: 149,
         flexibleSpace: Padding(
-          padding: const EdgeInsets.only(top: 20),
+          padding: const EdgeInsets.only(top: 35),
           child: Image.asset(
             "assets/images/logos/image 1.jpg",
             height: 57,
@@ -40,7 +40,7 @@ class OnboardingScreen1 extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(
-                  top: 160, left: 116, right: 116, bottom: 44),
+                  top: 80, left: 116, right: 116, bottom: 44),
               child: Image.asset("assets/images/image (4) (1) 2.jpg",width: 161,height: 161,fit: BoxFit.fill,),
             ),
             Padding(
@@ -89,32 +89,29 @@ class OnboardingScreen1 extends StatelessWidget {
                     fixedSize: Size(327, 56)),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(14.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    "Already have an account? ",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400,
-                    ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "Already have an account? ",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
                   ),
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Sign In",
-                        style: TextStyle(
-                          color: Color(0xff004673),
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ))
-                ],
-              ),
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Sign In",
+                      style: TextStyle(
+                        color: Color(0xff004673),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ))
+              ],
             )
           ],
         ),

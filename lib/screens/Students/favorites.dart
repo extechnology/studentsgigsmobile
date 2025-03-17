@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gigs/SubClasses/commonbottamnavigatonbar.dart';
 import 'package:gigs/SubClasses/gigs.dart';
 
-class MyGigs extends StatelessWidget {
-  const MyGigs({super.key});
+class FavoritesScreen extends StatelessWidget {
+  const FavoritesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class MyGigs extends StatelessWidget {
                 width: 149,
               ),
             ),
-            Text("My Gigs",style: TextStyle(
+            Text("Saved Gigs",style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.w300),),
             Gigs(showFavButton: true, showDurationInfo: true)
           ],

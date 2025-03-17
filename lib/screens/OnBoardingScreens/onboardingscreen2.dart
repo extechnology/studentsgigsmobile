@@ -12,7 +12,7 @@ class OnboardingScreen2 extends StatelessWidget {
         backgroundColor: Color(0xffF9F2ED),
         //toolbarHeight: 149,
         flexibleSpace: Padding(
-          padding: const EdgeInsets.only(top: 20),
+          padding: const EdgeInsets.only(top: 35),
           child: Image.asset(
             "assets/images/logos/image 1.jpg",
             height: 57,
@@ -37,7 +37,7 @@ class OnboardingScreen2 extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(
-                  top: 20, left: 116, right: 116, bottom: 44),
+                  top: 20, left: 116, right: 116, bottom: 40),
               child: Image.asset("assets/images/image (3) (1).jpg",height: 166,width: 166,fit: BoxFit.fill,),
             ),
             Padding(
@@ -80,7 +80,7 @@ class OnboardingScreen2 extends StatelessWidget {
               padding: const EdgeInsets.only(right: 30, left: 30, top: 54,),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "LoginPage");
+                  Navigator.pushNamed(context, "RegisterPage");
                 },
                 child: Text(
                   "Get Started",
@@ -112,7 +112,7 @@ class OnboardingScreen2 extends StatelessWidget {
                   ),
                   TextButton(
                       onPressed: () {
-
+                        Navigator.pushNamed(context, "LoginPage");
                       },
                       child: Text(
                         "Sign In",
