@@ -17,7 +17,7 @@ class OnboardProfile3 extends StatelessWidget {
           width: 55,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white,
+            color: Color(0xffE3E3E3),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
@@ -179,23 +179,25 @@ class OnboardProfile3 extends StatelessWidget {
                 hintText: "Select your availablity",
                 dropdownItems: ["immidiate", "On work", "remote"],
               ),
+              SizedBox(height: 20,),
+              Center(
+                child: SizedBox(
+                  width: 107,
+                  //height: 56,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "DashBoard");
+                    },
+                    child: Text(
+                      "Save",
+                      style: TextStyle(color: Colors.white,fontSize: 16),
+                    ),
+                    backgroundColor: Color(0xff004673),
+                  ),
+                ),
+              ),
             ],
           ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: SizedBox(
-        width: 107,
-        height: 56,
-        child: FloatingActionButton(
-          onPressed: () {
-            Navigator.pushNamed(context, "DashBoard");
-          },
-          child: Text(
-            "Save",
-            style: TextStyle(color: Colors.white,fontSize: 16),
-          ),
-          backgroundColor: Color(0xff004673),
         ),
       ),
     );

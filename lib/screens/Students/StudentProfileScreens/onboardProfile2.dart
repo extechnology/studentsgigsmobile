@@ -16,7 +16,7 @@ class OnboardProfile2 extends StatelessWidget {
           width: 55,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white,
+            color: Color(0xffE3E3E3),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
@@ -59,17 +59,30 @@ class OnboardProfile2 extends StatelessWidget {
               ),
               CircleAvatar(
                 radius: 65,
-                backgroundImage: AssetImage("assets/images/Group 69.jpg",),
-                child: Align(
-                  alignment: Alignment.bottomRight,
-                    child: Container(
-                      height: 41,
-                      width: 41,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color(0xffEB8125),
+                backgroundColor: Color(0xff004673),
+                child: Stack(
+                  children: [
+                    Center(
+                        child: Image.asset("assets/images/others/Group 69.png")),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Container(
+                        height: 41,
+                        width: 41,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color(0xffEB8125),
+                        ),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.mode_edit_outline_outlined),
+                          color: Colors.white,
+                          iconSize: 16,
+                        ),
                       ),
-                        child: IconButton(onPressed: (){}, icon: Icon(Icons.mode_edit_outline_outlined),color: Colors.white,iconSize: 16,))),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: 30,),
               Text("Portfolio/LinkedIn Profile",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
@@ -107,23 +120,27 @@ class OnboardProfile2 extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 40,top: 10,),
+                  child: SizedBox(
+                    width: 100,
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "OnboardProfile3");
+                      },
+                      child: Text(
+                        "Next",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      backgroundColor: Color(0xff0ffEB8125),
+                    ),
+                  ),
+                ),
               )
             ],
           ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: SizedBox(
-        width: 100,
-        child: FloatingActionButton(
-          onPressed: () {
-            Navigator.pushNamed(context, "OnboardProfile3");
-          },
-          child: Text(
-            "Next",
-            style: TextStyle(color: Colors.white),
-          ),
-          backgroundColor: Color(0xff0ffEB8125),
         ),
       ),
     );

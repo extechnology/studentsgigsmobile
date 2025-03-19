@@ -21,7 +21,7 @@ class DashBoradScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 58, bottom: 24),
                   child: Image.asset(
-                    "assets/images/logos/Property 1=Variant2.jpg",
+                    "assets/images/logos/image 1.png",
                     height: 57,
                     width: 149,
                   ),

@@ -8,10 +8,13 @@ import 'package:gigs/screens/Students/StudentProfileScreens/onboardProfile.dart'
 import 'package:gigs/screens/Students/StudentProfileScreens/onboardProfile2.dart';
 import 'package:gigs/screens/Students/StudentProfileScreens/onboardingProfile3.dart';
 import 'package:gigs/screens/Students/dashboeardscren.dart';
-import 'package:gigs/screens/Students/favorites.dart';
-import 'package:gigs/screens/Students/mygigs.dart';
-import 'package:gigs/screens/Students/profilescreen.dart';
-import 'package:gigs/screens/Students/searchscreen.dart';
+import 'package:gigs/screens/Students/dashboradscreens/extradashboardscreen/gigsdetail.dart';
+import 'package:gigs/screens/Students/dashboradscreens/extradashboardscreen/premiumscreen.dart';
+import 'package:gigs/screens/Students/dashboradscreens/extradashboardscreen/updateprofile.dart';
+import 'package:gigs/screens/Students/dashboradscreens/favorites.dart';
+import 'package:gigs/screens/Students/dashboradscreens/mygigs.dart';
+import 'package:gigs/screens/Students/dashboradscreens/profilescreen.dart';
+import 'package:gigs/screens/Students/dashboradscreens/searchscreen.dart';
 import 'package:gigs/screens/loginpage.dart';
 import 'package:gigs/screens/optionscreen.dart';
 import 'package:gigs/screens/register.dart';
@@ -47,6 +50,9 @@ class MyApp extends StatelessWidget {
         "FavoritesScreen": (context) => FavoritesScreen(),
         "SearchScreen": (context) => SearchScreen(),
         "ProfileScreen": (context) => ProfileScreen(),
+        "ProfileEditScreen": (context) => ProfileEditScreen(),
+        "GigsDetailScreen": (context) => GigsDetailScreen(),
+        "PremiumScreen": (context) => PremiumScreen(),
       },
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),

@@ -9,14 +9,38 @@ class OnboardingScreen2 extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xffF9F2ED),
       appBar: AppBar(
+        leading: Container(
+          margin: EdgeInsets.only(left: 7,top: 10),
+          height: 55,
+          width: 55,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Color(0xffE3E3E3),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+              ),
+            ],
+          ),
+          child: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              size: 26,
+            ),
+          ),
+        ),
+        toolbarHeight: 100,
         backgroundColor: Color(0xffF9F2ED),
-        //toolbarHeight: 149,
         flexibleSpace: Padding(
-          padding: const EdgeInsets.only(top: 35),
+          padding: const EdgeInsets.only(top: 60),
           child: Image.asset(
-            "assets/images/logos/image 1.jpg",
-            height: 57,
-            width: double.infinity,
+            "assets/images/logos/image 1.png",
+            // height: 69,
+            // width: double.infinity,
+            fit: BoxFit.contain,
           ),
         ),
         actions: [
@@ -37,8 +61,8 @@ class OnboardingScreen2 extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(
-                  top: 20, left: 116, right: 116, bottom: 40),
-              child: Image.asset("assets/images/image (3) (1).jpg",height: 166,width: 166,fit: BoxFit.fill,),
+                  top: 40, bottom: 20),
+              child: Image.asset("assets/images/onboard/image (3) (1).png",height: 166,width: 166,fit: BoxFit.fill,),
             ),
             Padding(
               padding: const EdgeInsets.only(right: 50, left: 50),
@@ -77,7 +101,7 @@ class OnboardingScreen2 extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 30, left: 30, top: 54,),
+              padding: const EdgeInsets.only(right: 30, left: 30, top: 30,),
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, "RegisterPage");

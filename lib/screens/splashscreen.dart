@@ -63,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
             position: _positionAnimation,
             child: Padding(
               padding: const EdgeInsets.only(top: 374,bottom: 373),
-              child: Image.asset("assets/images/logos/image 1.jpg",fit: BoxFit.fill,),
+              child: Image.asset("assets/images/logos/image 1.png",fit: BoxFit.cover,),
             ),
           ),
         ),

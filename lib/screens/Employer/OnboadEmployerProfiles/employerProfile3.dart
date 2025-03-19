@@ -16,13 +16,10 @@ class EmployerProfile3 extends StatelessWidget {
           width: 55,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white,
+            color: Color(0xffE3E3E3),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
-                // blurRadius: 1,
-                // spreadRadius: 1,
-                //offset: Offset(1, 0),
               ),
             ],
           ),
@@ -36,7 +33,7 @@ class EmployerProfile3 extends StatelessWidget {
             ),
           ),
         ),
-        toolbarHeight: 161,
+        // toolbarHeight: 165,
         actions: [
           TextButton(
             onPressed: () {},
@@ -49,18 +46,18 @@ class EmployerProfile3 extends StatelessWidget {
             ),
           ),
         ],
-        flexibleSpace: Padding(
-          padding: const EdgeInsets.only(top: 121,left: 35),
-          child: Text("Job Type",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Color(0xff3F414E)),),
-        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 35, right: 35, top: 13),
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 13),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 13),
+                child: Text("Job Type",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Color(0xff3F414E)),),
+              ),
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -181,22 +178,25 @@ class EmployerProfile3 extends StatelessWidget {
                 hintText: "Select your availablity",
                 dropdownItems: ["immidiate", "On work", "remote"],
               ),
+              SizedBox(height: 20,),
+              Center(
+                child: SizedBox(
+                  width: 107,
+                  //height: 56,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "DashBoard");
+                    },
+                    child: Text(
+                      "Save",
+                      style: TextStyle(color: Colors.white,fontSize: 16),
+                    ),
+                    backgroundColor: Color(0xff004673),
+                  ),
+                ),
+              ),
             ],
           ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: SizedBox(
-        width: 100,
-        child: FloatingActionButton(
-          onPressed: () {
-            Navigator.pushNamed(context, "OnboardProfile3");
-          },
-          child: Text(
-            "Next",
-            style: TextStyle(color: Colors.white),
-          ),
-          backgroundColor: Color(0xff0ffEB8125),
         ),
       ),
     );

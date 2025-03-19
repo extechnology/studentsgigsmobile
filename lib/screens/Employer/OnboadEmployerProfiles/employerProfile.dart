@@ -11,7 +11,7 @@ class EmployerProfile extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Color(0xffF9F2ED),
         body: Padding(
-          padding: const EdgeInsets.only(top: 74, left: 32, right: 32),
+          padding: const EdgeInsets.only(top: 40, left: 32, right: 32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -30,18 +30,20 @@ class EmployerProfile extends StatelessWidget {
                     fontSize: 26,
                     color: Color(0xff3F414E)),
               ),
-              Container(
-                child: Text(
-                  textAlign: TextAlign.center,
-                  "Explore hiring categories such as full-time roles, part-time & freelance work,internships & entry-level positions, and remote & hybrid opportunities to find the right talent for your business .",
-                  style: TextStyle(
-                      color: Color(0xff000000),
-                      fontSize: 17,
-                      fontWeight: FontWeight.w200,
-                      height: 1.5),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20,top: 8),
+                child: Container(
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    "Explore hiring categories such as full-time roles, part-time & freelance work,internships & entry-level positions, and remote & hybrid opportunities to find the right talent for your business .",
+                    style: TextStyle(
+                        color: Color(0xff000000),
+                        fontSize: 17,
+                        fontWeight: FontWeight.w200,
+                        height: 1.5),
+                  ),
                 ),
               ),
-              SizedBox(height: 19,),
               Expanded(
                 child: MasonryGridView.builder(
                   itemCount: 10,
@@ -64,16 +66,10 @@ class EmployerProfile extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding:
-                                  const EdgeInsets.only(right: 23, left: 23),
+                              padding: const EdgeInsets.only(right: 23,left: 23),
                               child: ClipRRect(
-                                borderRadius: BorderRadius.vertical(
-                                    top: Radius.circular(12)),
-                                child: Image.network(
-                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnii63NitJfNQ8ryTfHuFUpNVEdwzDoQJ8PPgq0f1WX9imHI5AI-2Zp3nvY6EV2rl-uP0&usqp=CAU",
-                                  // fit: BoxFit.cover,
-                                  width: double.infinity,
-                                ),
+                                  borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+                                  child: Image.asset("assets/images/others/undraw_in-the-office_e7pg 2.png")
                               ),
                             ),
                           ),

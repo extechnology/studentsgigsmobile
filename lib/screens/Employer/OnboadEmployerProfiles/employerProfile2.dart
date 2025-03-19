@@ -16,7 +16,7 @@ class EmpolyerProfile2 extends StatelessWidget {
           width: 55,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white,
+            color: Color(0xffE3E3E3),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
@@ -25,7 +25,7 @@ class EmpolyerProfile2 extends StatelessWidget {
           ),
           child: IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, "OnboardProfile");
+              Navigator.pop(context);
             },
             icon: Icon(
               Icons.arrow_back,
@@ -46,77 +46,95 @@ class EmpolyerProfile2 extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(right: 35,left: 35),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 13,bottom: 17,left: 34),
-              child: Text("Add Your Company Logo",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            ),
-            CircleAvatar(
-              radius: 65,
-              backgroundImage: AssetImage("assets/images/Group 69.jpg",),
-              child: Align(
-                  alignment: Alignment.bottomRight,
-                  child: Container(
-                      height: 41,
-                      width: 41,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color(0xffEB8125),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(right: 35,left: 35),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 17,left: 34),
+                child: Text("Add Your Company Logo",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              ),
+              CircleAvatar(
+                radius: 65,
+                backgroundColor: Color(0xff004673),
+                child: Stack(
+                  children: [
+                    Center(
+                        child: Image.asset("assets/images/others/Group 69.png")),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Container(
+                        height: 41,
+                        width: 41,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color(0xffEB8125),
+                        ),
+                        child: IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.mode_edit_outline_outlined),
+                          color: Colors.white,
+                          iconSize: 16,
+                        ),
                       ),
-                      child: IconButton(onPressed: (){}, icon: Icon(Icons.mode_edit_outline_outlined),color: Colors.white,iconSize: 16,))),
-            ),
-            SizedBox(height: 30,),
-            Text("Company Name",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            Padding(
-              padding: const EdgeInsets.only(top: 13,bottom: 29),
-              child: CustomTextFormField(
-                //hintText: "Enter or paste your profile link",
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Text("Indusry Type",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            Padding(
-              padding: const EdgeInsets.only(top: 13,bottom: 29),
-              child: CustomTextFormField(
-               dropdownItems: [],
+              SizedBox(height: 30,),
+              Text("Company Name",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 29),
+                child: CustomTextFormField(
+                  //hintText: "Enter or paste your profile link",
+                ),
               ),
-            ), Text("Company info",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            Padding(
-              padding: const EdgeInsets.only(top: 13,bottom: 29),
-              child: CustomTextFormField(
-                //hintText: "Enter or paste your profile link",
+              Text("Indusry Type",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 29),
+                child: CustomTextFormField(
+                 dropdownItems: [],
+                ),
+              ), Text("Company info",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 29),
+                child: CustomTextFormField(
+                  //hintText: "Enter or paste your profile link",
+                ),
               ),
-            ),
-            Text("Country",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
-            Padding(
-              padding: const EdgeInsets.only(top: 13,bottom: 29),
-              child: CustomTextFormField(
-                hintText: "Select your Country",
-                dropdownItems: [],
+              Text("Country",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Padding(
+                padding: const EdgeInsets.only(top: 13,bottom: 30),
+                child: CustomTextFormField(
+                  hintText: "Select your Country",
+                  dropdownItems: [],
+                ),
               ),
-            ),
-          ],
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 40,top: 10,),
+                  child: SizedBox(
+                    width: 100,
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, "EmployerProfile3");
+                      },
+                      child: Text(
+                        "Next",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      backgroundColor: Color(0xff0ffEB8125),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: SizedBox(
-          width: 107,
-          height: 56,
-          child: FloatingActionButton(
-            onPressed: () {
-              Navigator.pushNamed(context, "EmployerProfile3");
-            },
-            child: Text(
-              "Save",
-              style: TextStyle(color: Colors.white,fontSize: 16),
-            ),
-            backgroundColor: Color(0xff004673),
-          ),
-        )
     );
   }
 }

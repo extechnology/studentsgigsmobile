@@ -14,9 +14,9 @@ class OptionScreen extends StatelessWidget {
           /// Background Image (Positioned to be in the center)
           Center(
             child: Padding(
-              padding: const EdgeInsets.only(top: 160),
+              padding: const EdgeInsets.only(top: 80),
               child: Image.asset(
-                "assets/images/image (2) 1.jpg",
+                "assets/images/onboard/image (2) 1.png",
                 fit: BoxFit.cover,
                 height: 227,
                 width: 227,
@@ -30,7 +30,7 @@ class OptionScreen extends StatelessWidget {
             child: Container(
               height: double.infinity,
               width: double.infinity,
-              color: Colors.white.withOpacity(0.5),
+              color: Colors.white.withOpacity(0.8),
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -38,7 +38,7 @@ class OptionScreen extends StatelessWidget {
                   Column(
                     children: [
                       SizedBox(
-                        height: 91,
+                        height: 90,
                       ),
                       Text(
                         "Welcome to",
@@ -48,10 +48,13 @@ class OptionScreen extends StatelessWidget {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
+                      SizedBox(
+                        height: 8,
+                      ),
                       Image.asset(
-                          "assets/images/logos/Property 1=Variant2.jpg"),
+                          "assets/images/logos/image 1.png"),
                       Padding(
-                        padding: const EdgeInsets.only(right: 16, left: 16),
+                        padding: const EdgeInsets.only(right: 16, left: 16,),
                         child: RichText(
                           textAlign: TextAlign.center,
                           text: TextSpan(
@@ -78,10 +81,7 @@ class OptionScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  /// Middle Section (Empty Space for Background Image Visibility)
                   Expanded(child: SizedBox()),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -112,7 +112,7 @@ class OptionScreen extends StatelessWidget {
                               children: [
                                 CircleAvatar(
                                   backgroundImage: AssetImage(
-                                      "assets/images/Ellipse 1498.jpg"),
+                                      "assets/images/others/Ellipse 1498.png"),
                                   radius: 30,
                                 ),
                                 Text(
@@ -156,7 +156,7 @@ class OptionScreen extends StatelessWidget {
                               children: [
                                 CircleAvatar(
                                   backgroundImage: AssetImage(
-                                      "assets/images/Ellipse 1497.jpg"),
+                                      "assets/images/others/Ellipse 1497.png"),
                                   radius: 30,
                                 ),
                                 Text(

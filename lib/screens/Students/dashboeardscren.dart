@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/screens/Students/favorites.dart';
-import 'package:gigs/screens/Students/homepage.dart';
-import 'package:gigs/screens/Students/searchscreen.dart';
-import 'package:gigs/screens/Students/mygigs.dart';
-import 'package:gigs/screens/Students/profilescreen.dart';
-import 'package:gigs/SubClasses/commonbottamnavigatonbar.dart';
+import 'package:gigs/screens/Students/dashboradscreens/favorites.dart';
+import 'package:gigs/screens/Students/dashboradscreens/homepage.dart';
+import 'package:gigs/screens/Students/dashboradscreens/mygigs.dart';
+import 'package:gigs/screens/Students/dashboradscreens/profilescreen.dart';
+import 'package:gigs/screens/Students/dashboradscreens/searchscreen.dart';
 
 class DashBoard extends StatefulWidget {
   @override

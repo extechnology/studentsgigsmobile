@@ -11,14 +11,13 @@ class Welcomescreen extends StatelessWidget {
       backgroundColor: Color(0xffF9F2ED),
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        toolbarHeight: 100,
         backgroundColor: Color(0xffF9F2ED),
-        toolbarHeight: 65,
         flexibleSpace: Padding(
-          padding: const EdgeInsets.only(top: 35),
+          padding: const EdgeInsets.only(top: 60),
           child: Image.asset(
-            "assets/images/logos/image 1.jpg",
-            height: 57,
-            width: double.infinity,
+            "assets/images/logos/image 1.png",
+            fit: BoxFit.contain,
           ),
         ),
         actions: [
@@ -38,8 +37,8 @@ class Welcomescreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 154, left: 72, right: 72),
-              child: Image.asset("assets/images/image (2) 1.jpg",fit: BoxFit.fill,),
+              padding: const EdgeInsets.only(top: 100, left: 72, right: 72),
+              child: Image.asset("assets/images/onboard/image (2) 1.png",fit: BoxFit.fill,),
             ),
             Container(
               padding: EdgeInsets.only(right: 35, left: 35, top: 42),
