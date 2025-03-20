@@ -1,149 +1,184 @@
 import 'package:flutter/material.dart';
 
 class Gigs extends StatelessWidget {
-  Gigs({
-    super.key,
-    this.iconButton,
-    this.showFavButton = false,
-    this.showDurationInfo = false,
-  });
+  Gigs(
+      {super.key,
+      this.icon,
+      required this.text1,
+      required this.text2,
+      required this.showLikeButton});
 
-  final Widget? iconButton;
-  final bool showFavButton;
-  final bool showDurationInfo;
+  final IconData? icon;
+  final String text1;
+  final String text2;
+  final bool showLikeButton; // New parameter to control visibility
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, "GigsDetailScreen");
-      },
+      onTap: () => Navigator.pushNamed(context, "GigsDetailScreen"),
       child: Container(
-        padding: const EdgeInsets.only(left: 15, top: 12, bottom: 11, right: 37),
-        decoration: const BoxDecoration(
+        height: 150,
+        width: MediaQuery.of(context).size.width * 0.8,
+        padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
           color: Color(0xffFFFFFF),
-          borderRadius: BorderRadius.all(
-            Radius.circular(21),
-          ),
+          borderRadius: BorderRadius.all(Radius.circular(21)),
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  "Frontend Developer",
+                Text(
+                  "Backend Developer",
                   style: TextStyle(
-                      color: Color(0xff000000),
-                      fontSize: 20,
-                      fontWeight: FontWeight.w400),
-                ),
-                const SizedBox(width: 10),
-                TextButton(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    backgroundColor: const Color(0xff9FEBA8),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                  ),
-                  child: const Text(
-                    "Online",
-                    style: TextStyle(fontSize: 11, fontWeight: FontWeight.w400),
+                    color: Color(0xff000000),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
-                // SizedBox(width: 30,),
-                if (showFavButton) // Only show if enabled
-                  Expanded(
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.favorite_outlined,color: Colors.red,),
+                Container(
+                  height: 20,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    color: Color(0xffFA6572),
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Kerala",
+                      style: TextStyle(
+                        color: Color(0xff000000),
+                        fontSize: 11,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ),
+                ),
+                if (showLikeButton) LikeButton(),
               ],
             ),
+            SizedBox(height: 10),
             Row(
               children: [
-                Image.asset("assets/images/logos/image (6).png"),
+                Image.asset(
+                  "assets/images/logos/image (6).png",
+                  width: 18,
+                  height: 18,
+                ),
                 const SizedBox(width: 5),
                 const Text(
-                  "Ex- Media",
+                  "Ex- Technology",
                   style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 11,
-                      color: Color(0xff000000)),
+                    fontWeight: FontWeight.w700,
+                    fontSize: 11,
+                    color: Color(0xff000000),
+                  ),
                 ),
               ],
             ),
-            const SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "Gig Pay",
-                      style: TextStyle(
+            SizedBox(height: 10,),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Gig Pay",
+                        style: TextStyle(
                           color: Color(0xff000000),
-                          fontSize: 8,
-                          fontWeight: FontWeight.w200),
-                    ),
-                    const SizedBox(height: 4),
-                    const Text(
-                      "₹30,000 - Project Based",
-                      style: TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 10,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-                const SizedBox(width: 80),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      "Experience Level",
-                      style: TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 8,
-                          fontWeight: FontWeight.w200),
-                    ),
-                    const SizedBox(height: 4),
-                    const Text(
-                      "Senior",
-                      style: TextStyle(
-                          color: Color(0xff000000),
-                          fontSize: 10,
-                          fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-                 SizedBox( width: 10),
-                if (showDurationInfo) // Only show if enabled
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Started",
-                          style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
                         ),
-                        const SizedBox(height: 4),
-                        const Text(
-                          "4 days",
-                          style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+                      ),
+                      SizedBox(height: 5), // Spacing between text groups
+                      Text(
+                        "₹30,000 - Project Based",
+                        style: TextStyle(
+                          color: Color(0xff000000),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-              ],
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Experience Level",
+                        style: TextStyle(
+                          color: Color(0xff000000),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "Senior",
+                        style: TextStyle(
+                          color: Color(0xff000000),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        text1!,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        text2!,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+class LikeButton extends StatefulWidget {
+  const LikeButton({super.key});
+
+  @override
+  State<LikeButton> createState() => _LikeButtonState();
+}
+
+class _LikeButtonState extends State<LikeButton> {
+  bool isLiked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+        onTap: () {
+          setState(() {
+            isLiked = !isLiked; // Toggle like state
+          });
+        },
+        child: Icon(
+          isLiked ? Icons.favorite_outlined : Icons.favorite_border_outlined,
+          color: isLiked ? Color(0xffFB4A59) : Color(0xff1A1A1A),
+        ));
   }
 }

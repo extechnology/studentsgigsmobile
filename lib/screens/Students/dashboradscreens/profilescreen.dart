@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/SubClasses/commonbottamnavigatonbar.dart';
-import 'package:gigs/SubClasses/textfield.dart';
+
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -10,7 +9,6 @@ class ProfileScreen extends StatelessWidget {
     return SafeArea(
       top: true,
       child: Scaffold(
-        bottomNavigationBar: BottamNavigatorr(),
         body: Center(
           child: SingleChildScrollView(
             child: Padding(

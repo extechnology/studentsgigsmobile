@@ -175,23 +175,24 @@ class ProfileEditScreen extends StatelessWidget {
                   hintText: "",
                 ),
               ),
+              Center(
+                child: SizedBox(
+                  width: 107,
+                  height: 56,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "DashBoard");
+                    },
+                    child: Text(
+                      "Save",
+                      style: TextStyle(color: Colors.white,fontSize: 16),
+                    ),
+                    backgroundColor: Color(0xff004673),
+                  ),
+                ),
+              ),
             ],
           ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: SizedBox(
-        width: 107,
-        height: 56,
-        child: FloatingActionButton(
-          onPressed: () {
-            Navigator.pushNamed(context, "DashBoard");
-          },
-          child: Text(
-            "Save",
-            style: TextStyle(color: Colors.white,fontSize: 16),
-          ),
-          backgroundColor: Color(0xff004673),
         ),
       ),
     );

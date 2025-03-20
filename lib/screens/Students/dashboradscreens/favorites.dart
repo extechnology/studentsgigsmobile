@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/SubClasses/commonbottamnavigatonbar.dart';
 import 'package:gigs/SubClasses/gigs.dart';
 
 class FavoritesScreen extends StatelessWidget {
@@ -22,13 +21,23 @@ class FavoritesScreen extends StatelessWidget {
                 width: 149,
               ),
             ),
-            Text("Saved Gigs",style: TextStyle(
-                fontSize: 20, fontWeight: FontWeight.w300),),
-            Gigs(showFavButton: true, showDurationInfo: true)
+            Text(
+              "Saved Gigs",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+                width: double.infinity,
+                child: Gigs(
+                  text1: 'Start',
+                  text2: '7 Days',
+                  showLikeButton: true,
+                ))
           ],
         ),
       ),
-      bottomNavigationBar: BottamNavigatorr(),
     );
   }
 }

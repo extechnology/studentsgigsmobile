@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/SubClasses/commonbottamnavigatonbar.dart';
 import 'package:gigs/SubClasses/gigs.dart';
 
 class DashBoradScreen extends StatelessWidget {
@@ -10,7 +9,6 @@ class DashBoradScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xffF9F2ED),
-        bottomNavigationBar: BottamNavigatorr(),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -19,7 +17,7 @@ class DashBoradScreen extends StatelessWidget {
               children: [
                 // Logo
                 Padding(
-                  padding: const EdgeInsets.only(top: 58, bottom: 24),
+                  padding: const EdgeInsets.only(top: 58, bottom: 24,left: 20,right: 20),
                   child: Image.asset(
                     "assets/images/logos/image 1.png",
                     height: 57,
@@ -34,8 +32,8 @@ class DashBoradScreen extends StatelessWidget {
                       children: [
                         TextSpan(
                           text: "Hey ",
-                          style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.w300),
+                          style: TextStyle(fontFamily: "Montserrat",
+                              fontSize: 30, fontWeight: FontWeight.w300,),
                         ),
                         TextSpan(
                           text: "Adhila",
@@ -51,9 +49,9 @@ class DashBoradScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                buildSection("Current Gigs"),
-                buildSection("Pending Applications"),
-                buildSection("Completed Gigs"),
+                buildSection("Current Gigs",context),
+                buildSection("Pending Applications",context),
+                buildSection("Completed Gigs",context),
               ],
             ),
           ),
@@ -62,7 +60,7 @@ class DashBoradScreen extends StatelessWidget {
     );
   }
 
-  Widget buildSection(String title) {
+  Widget buildSection(String title, context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -95,18 +93,22 @@ class DashBoradScreen extends StatelessWidget {
           ),
         ),
         Container(
-          height: 190,
-          child: ListView.builder(
-            shrinkWrap: true,
-            scrollDirection: Axis.horizontal,
-            itemCount: 4,
-            itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.only(right: 20),
-                child: Gigs(showFavButton: false, showDurationInfo:
-                false),
-              );
-            },
+          width: double.infinity,
+          height: 160,
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: ListView.builder(
+              shrinkWrap: true,
+              physics: ClampingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              itemCount: 4,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.only(right: 30),
+                  child: Gigs(text1: "",text2: "", showLikeButton: false,),
+                );
+              },
+            ),
           ),
         ) // iconButton is optional
       ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/SubClasses/commonbottamnavigatonbar.dart';
 import 'package:gigs/SubClasses/gigs.dart';
 
 class MyGigs extends StatelessWidget {
@@ -23,12 +22,12 @@ class MyGigs extends StatelessWidget {
               ),
             ),
             Text("My Gigs",style: TextStyle(
-                fontSize: 20, fontWeight: FontWeight.w300),),
-            Gigs(showFavButton: true, showDurationInfo: true)
+                fontSize: 20, fontWeight: FontWeight.w500),),
+            SizedBox(height: 20,),
+            Container(width: double.infinity, child: Gigs(text1: 'Start', text2: 'Start', showLikeButton: true,))
           ],
         ),
       ),
-      bottomNavigationBar: BottamNavigatorr(),
     );
   }
 }

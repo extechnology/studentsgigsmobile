@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/SubClasses/commonbottamnavigatonbar.dart';
 import 'package:gigs/SubClasses/gigs.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -8,7 +7,6 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottamNavigatorr(),
       backgroundColor: Color(0xffF9F2ED),
       body: SingleChildScrollView(
         child: Column(
@@ -128,13 +126,15 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
             Container(
+              padding: EdgeInsets.only(right: 12,left: 12),
               height: MediaQuery.of(context).size.height/2,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: 10,
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Gigs(showDurationInfo: true,showFavButton: true,),
+                  child: Gigs(text1: 'Start', text2: '7 Days', showLikeButton: true, // Change color when liked
+                  ),
                 ),
               ),
             )
