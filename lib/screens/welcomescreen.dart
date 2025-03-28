@@ -25,7 +25,7 @@ class Welcomescreen extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 "Skip",
-                style: TextStyle(
+                style: TextStyle(fontFamily: "Poppins",
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Color(0xff313131)),
@@ -44,7 +44,7 @@ class Welcomescreen extends StatelessWidget {
               padding: EdgeInsets.only(right: 35, left: 35, top: 42),
               child: Text(
                 "Find freelance gigs tailored to your skills and interests",
-                style: TextStyle(
+                style: TextStyle(fontFamily: "Poppins",
                   fontWeight: FontWeight.w400,
                   fontSize: 24,
                   color: Color(0xff000000),
@@ -59,7 +59,7 @@ class Welcomescreen extends StatelessWidget {
                 },
                 child: Text(
                   "Next",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w600),
@@ -77,10 +77,10 @@ class Welcomescreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("Already have an account? ",style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w400,),),
+                  Text("Already have an account? ",style: TextStyle(fontFamily: "Poppins",color: Colors.black,fontSize: 18,fontWeight: FontWeight.w400,),),
                   TextButton(onPressed: (){
                     //Navigator.pushNamed(context, "OnboardingScreen1");
-                  }, child: Text("Sign In",style: TextStyle(color: Color(0xffEB8125),fontSize: 18,fontWeight: FontWeight.w400,),))
+                  }, child: Text("Sign In",style: TextStyle(fontFamily: "Poppins",color: Color(0xffEB8125),fontSize: 18,fontWeight: FontWeight.w400,),))
                 ],
               ),
             )

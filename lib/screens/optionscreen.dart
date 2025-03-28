@@ -17,7 +17,7 @@ class OptionScreen extends StatelessWidget {
               padding: const EdgeInsets.only(top: 80),
               child: Image.asset(
                 "assets/images/onboard/image (2) 1.png",
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
                 height: 227,
                 width: 227,
               ),
@@ -42,7 +42,7 @@ class OptionScreen extends StatelessWidget {
                       ),
                       Text(
                         "Welcome to",
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: "Poppins",
                           color: Color(0xff000000),
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
@@ -62,7 +62,7 @@ class OptionScreen extends StatelessWidget {
                               TextSpan(
                                 text:
                                     "Connecting students with the best gigs and companies with top student talent—quick, easy, and hassle-free! ",
-                                style: TextStyle(
+                                style: TextStyle(fontFamily: "Poppins",
                                   color: Color(0xff000000),
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
@@ -118,7 +118,7 @@ class OptionScreen extends StatelessWidget {
                                 Text(
                                   "ExploreGigs",
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: TextStyle(fontFamily: "Poppins",
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white,
@@ -162,7 +162,7 @@ class OptionScreen extends StatelessWidget {
                                 Text(
                                   "Find Student Talents",
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: TextStyle(fontFamily: "Poppins",
                                     fontSize: 20,
                                     fontWeight: FontWeight.w600,
                                     color: Colors.white,

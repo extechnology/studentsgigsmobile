@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gigs/SubClasses/gigs.dart';
+import 'package:gigs/SubClasses/jobcard.dart';
 
 class DashBoradScreen extends StatelessWidget {
   const DashBoradScreen({super.key});
@@ -32,17 +33,17 @@ class DashBoradScreen extends StatelessWidget {
                       children: [
                         TextSpan(
                           text: "Hey ",
-                          style: TextStyle(fontFamily: "Montserrat",
+                          style: TextStyle(fontFamily: "Poppins",
                               fontSize: 30, fontWeight: FontWeight.w300,),
                         ),
                         TextSpan(
                           text: "Adhila",
-                          style: TextStyle(
+                          style: TextStyle(fontFamily: "Poppins",
                               fontSize: 30, fontWeight: FontWeight.w600),
                         ),
                         TextSpan(
                           text: ",\nGood Afternoon!",
-                          style: TextStyle(
+                          style: TextStyle(fontFamily: "Poppins",
                               fontSize: 30, fontWeight: FontWeight.w300),
                         ),
                       ],
@@ -70,13 +71,13 @@ class DashBoradScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(title,
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20)),
+                  style: TextStyle(fontFamily: "Poppins",fontWeight: FontWeight.w600, fontSize: 20)),
               TextButton(
                 onPressed: () {},
                 child: Row(
                   children: [
                     Text("See All",
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: "Poppins",
                             fontSize: 15,
                             color: Color(0xff3F414E),
                             fontWeight: FontWeight.w400)),
@@ -94,7 +95,7 @@ class DashBoradScreen extends StatelessWidget {
         ),
         Container(
           width: double.infinity,
-          height: 160,
+          height: 300,
           child: SizedBox(
             width: MediaQuery.of(context).size.width,
             child: ListView.builder(
@@ -105,7 +106,19 @@ class DashBoradScreen extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding: const EdgeInsets.only(right: 30),
-                  child: Gigs(text1: "",text2: "", showLikeButton: false,),
+                  child: JobCard(
+                    applied: false,
+                    company: "Ex-Media",
+                    employerId: "2",
+                    id: "3",
+                    isLoading: false,
+                    jobType: "developer",
+                    location: "Kochi",
+                    logo: "assets/images/logos/image (6).png",
+                    onSave: () {},
+                    position: "Snr",
+                    salary: "3000",salaryType: "Monthly",saved: false,timeAgo: "& days",
+                  )
                 );
               },
             ),

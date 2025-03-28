@@ -39,7 +39,7 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Free",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 26,
                         fontWeight: FontWeight.w700,
                         color: Color(0xffEB8125)),
@@ -57,7 +57,7 @@ class PremiumPlan1 extends StatelessWidget {
                     ),
                     child: const Text(
                       "Current",
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: "Poppins",
                           color: Color(0xff000000),
                           fontSize: 11,
                           fontWeight: FontWeight.w400),
@@ -70,14 +70,14 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Job Applications",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
                   ),
                   Text(
                     "3 Students",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 10,
                         fontWeight: FontWeight.w400,
                         color: Color(0xff827AE1)),
@@ -89,14 +89,14 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Validity",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
                   ),
                   Text(
                     "1 Month",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 10,
                         fontWeight: FontWeight.w400,
                         color: Color(0xff827AE1)),
@@ -109,14 +109,14 @@ class PremiumPlan1 extends StatelessWidget {
                   Text(
                     "Profile Visibility to Employers",
                     style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12,fontFamily: "Poppins",
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
                   ),
                   Text(
                     "Basic",
                     style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 10,fontFamily: "Poppins",
                         fontWeight: FontWeight.w400,
                         color: Color(0xff827AE1)),
                   ),
@@ -127,7 +127,7 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Resume Builder",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
@@ -144,7 +144,7 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Job Alerts & Notifications",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
@@ -161,7 +161,7 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Saved Jobs",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
@@ -178,7 +178,7 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Workplace Essentials Certified course",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
@@ -195,7 +195,7 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Priority Shortlisting by Employers",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
@@ -212,7 +212,7 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Premium Profile Badge",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
@@ -229,7 +229,7 @@ class PremiumPlan1 extends StatelessWidget {
                 children: [
                   Text(
                     "Live Chat With Employers",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
                         color: Color(0xff004673)),
@@ -245,7 +245,7 @@ class PremiumPlan1 extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   "Current Plan",
-                  style: TextStyle(color: Color(0xffFFFFFF)),
+                  style: TextStyle(fontFamily: "Poppins",color: Color(0xffFFFFFF)),
                 ),
                 style: ElevatedButton.styleFrom(
                     fixedSize: Size(218, 40),

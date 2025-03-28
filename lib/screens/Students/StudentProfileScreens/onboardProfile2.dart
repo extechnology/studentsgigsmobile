@@ -35,10 +35,12 @@ class OnboardProfile2 extends StatelessWidget {
         ),
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, "OnboardProfile3");
+            },
             child: Text(
               "Skip",
-              style: TextStyle(
+              style: TextStyle(fontFamily: "Poppins",
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                   color: Color(0xff313131)),
@@ -46,59 +48,61 @@ class OnboardProfile2 extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(right: 35,left: 35),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(right: 25,left: 25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 17,left: 34),
-                child: Text("Add your profile image",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+                child: Text("Add your profile image",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               ),
-              CircleAvatar(
-                radius: 65,
-                backgroundColor: Color(0xff004673),
-                child: Stack(
-                  children: [
-                    Center(
-                        child: Image.asset("assets/images/others/Group 69.png")),
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: Container(
-                        height: 41,
-                        width: 41,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color(0xffEB8125),
-                        ),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.mode_edit_outline_outlined),
-                          color: Colors.white,
-                          iconSize: 16,
+              Center(
+                child: CircleAvatar(
+                  radius: 65,
+                  backgroundColor: Color(0xff004673),
+                  child: Stack(
+                    children: [
+                      Center(
+                          child: Image.asset("assets/images/others/Group 69.png")),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: Container(
+                          height: 41,
+                          width: 41,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color(0xffEB8125),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.mode_edit_outline_outlined),
+                            color: Colors.white,
+                            iconSize: 16,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: 30,),
-              Text("Portfolio/LinkedIn Profile",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Text("Portfolio/LinkedIn Profile",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 29),
                 child: CustomTextFormField(
                   hintText: "Enter or paste your profile link",
                 ),
               ),
-              Text("Available Work Hours",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Text("Available Work Hours",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 29),
                 child: CustomTextFormField(
                   hintText: "Hours",
                 ),
-              ), Text("Available Work Period",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              ), Text("Available Work Period",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

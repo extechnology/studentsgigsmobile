@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/SubClasses/gigs.dart';
+import 'package:gigs/SubClasses/jobcard.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -36,6 +36,7 @@ class SearchScreen extends StatelessWidget {
                         fillColor: Color(0xff004673),
                         labelText: "Search Gigs",
                         labelStyle: TextStyle(
+                            fontFamily: "Poppins",
                             fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xffDADADA)),
@@ -63,6 +64,7 @@ class SearchScreen extends StatelessWidget {
               child: Text(
                 "Job Categories",
                 style: TextStyle(
+                  fontFamily: "Poppins",
                   color: Color(0xff3F414E),
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
@@ -101,6 +103,7 @@ class SearchScreen extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.black,
+                                fontFamily: "Poppins",
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -119,6 +122,7 @@ class SearchScreen extends StatelessWidget {
               child: Text(
                 "Gigs For You",
                 style: TextStyle(
+                  fontFamily: "Poppins",
                   color: Color(0xff3F414E),
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
@@ -126,16 +130,26 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(right: 12,left: 12),
-              height: MediaQuery.of(context).size.height/2,
+              padding: EdgeInsets.only(right: 12, left: 12),
+              height: MediaQuery.of(context).size.height / 1.9,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: 10,
                 itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Gigs(text1: 'Start', text2: '7 Days', showLikeButton: true, // Change color when liked
-                  ),
-                ),
+                    padding: const EdgeInsets.all(8.0),
+                    child: JobCard(
+                      applied: false,
+                      company: "Ex-Media",
+                      employerId: "2",
+                      id: "3",
+                      isLoading: false,
+                      jobType: "developer",
+                      location: "Kochi",
+                      logo: "assets/images/logos/image (6).png",
+                      onSave: () {},
+                      position: "Snr",
+                      salary: "3000",salaryType: "Monthly",saved: false,timeAgo: "& days",
+                    )),
               ),
             )
           ],

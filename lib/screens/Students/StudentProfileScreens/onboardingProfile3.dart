@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gigs/SubClasses/customlisttile.dart';
 import 'package:gigs/SubClasses/textfield.dart';
 
 class OnboardProfile3 extends StatelessWidget {
   const OnboardProfile3({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,9 @@ class OnboardProfile3 extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xffF9F2ED),
         leading: Container(
-          margin: EdgeInsets.only(left: 10,),
+          margin: EdgeInsets.only(
+            left: 10,
+          ),
           height: 55,
           width: 55,
           decoration: BoxDecoration(
@@ -37,7 +39,9 @@ class OnboardProfile3 extends StatelessWidget {
         // toolbarHeight: 165,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, "DashBoard");
+            },
             child: Text(
               "Skip",
               style: TextStyle(
@@ -56,8 +60,15 @@ class OnboardProfile3 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 13,bottom: 13),
-                child: Text("Job Type",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Color(0xff3F414E)),),
+                padding: const EdgeInsets.only(top: 13, bottom: 13),
+                child: Text(
+                  "Job Type",
+                  style: TextStyle(
+                      fontFamily: "Poppins",
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xff3F414E)),
+                ),
               ),
               Container(
                 child: Row(
@@ -77,6 +88,7 @@ class OnboardProfile3 extends StatelessWidget {
                       child: Text(
                         "Online",
                         style: TextStyle(
+                            fontFamily: "Poppins",
                             color: Color(0xff242424),
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
@@ -96,6 +108,7 @@ class OnboardProfile3 extends StatelessWidget {
                       child: Text(
                         "Offline",
                         style: TextStyle(
+                            fontFamily: "Poppins",
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
@@ -115,6 +128,7 @@ class OnboardProfile3 extends StatelessWidget {
                       child: Text(
                         "Both",
                         style: TextStyle(
+                            fontFamily: "Poppins",
                             color: Color(0xff242424),
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
@@ -128,11 +142,20 @@ class OnboardProfile3 extends StatelessWidget {
                 child: Text(
                   "Technical Skills",
                   style: TextStyle(
+                      fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
                 ),
               ),
+              // CustomListTile(
+              //   title: "Search Your Skill or Create New",
+              //   iconTrailing: DropdownButton(
+              //     items: ["Flutter", "React", "Java"].map((value) =>
+              //         DropdownMenuItem(value: value, child: Text(value),)).toList(),
+              //     onChanged: (value) {},
+              //   ),
+              // ),
               CustomTextFormField(
                 hintText: "Search Your Skill or Create New",
                 dropdownItems: ["Flutter", "React", "Java"],
@@ -142,6 +165,7 @@ class OnboardProfile3 extends StatelessWidget {
                 child: Text(
                   "Level",
                   style: TextStyle(
+                      fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -156,6 +180,7 @@ class OnboardProfile3 extends StatelessWidget {
                 child: Text(
                   "Experience",
                   style: TextStyle(
+                      fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -170,6 +195,7 @@ class OnboardProfile3 extends StatelessWidget {
                 child: Text(
                   "Availability",
                   style: TextStyle(
+                      fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -179,7 +205,9 @@ class OnboardProfile3 extends StatelessWidget {
                 hintText: "Select your availablity",
                 dropdownItems: ["immidiate", "On work", "remote"],
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Center(
                 child: SizedBox(
                   width: 107,
@@ -190,7 +218,10 @@ class OnboardProfile3 extends StatelessWidget {
                     },
                     child: Text(
                       "Save",
-                      style: TextStyle(color: Colors.white,fontSize: 16),
+                      style: TextStyle(
+                          fontFamily: "Poppins",
+                          color: Colors.white,
+                          fontSize: 16),
                     ),
                     backgroundColor: Color(0xff004673),
                   ),

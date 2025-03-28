@@ -56,7 +56,7 @@ class EmployerProfile3 extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 13),
-                child: Text("Job Type",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Color(0xff3F414E)),),
+                child: Text("Job Type",style: TextStyle(fontFamily: "Poppins",fontSize: 20,fontWeight: FontWeight.w600,color: Color(0xff3F414E)),),
               ),
               Container(
                 child: Row(
@@ -75,7 +75,7 @@ class EmployerProfile3 extends StatelessWidget {
                       ),
                       child: Text(
                         "Online",
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: "Poppins",
                             color: Color(0xff242424),
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
@@ -94,7 +94,7 @@ class EmployerProfile3 extends StatelessWidget {
                       ),
                       child: Text(
                         "Offline",
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: "Poppins",
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
@@ -113,7 +113,7 @@ class EmployerProfile3 extends StatelessWidget {
                       ),
                       child: Text(
                         "Both",
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: "Poppins",
                             color: Color(0xff242424),
                             fontSize: 14,
                             fontWeight: FontWeight.w400),
@@ -126,7 +126,7 @@ class EmployerProfile3 extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 26, bottom: 13),
                 child: Text(
                   "Gig category",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -140,7 +140,7 @@ class EmployerProfile3 extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 25, bottom: 13),
                 child: Text(
                   "Payment type",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -154,7 +154,7 @@ class EmployerProfile3 extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 25, bottom: 13),
                 child: Text(
                   "City",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -168,7 +168,7 @@ class EmployerProfile3 extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 25, bottom: 13),
                 child: Text(
                   "Availability",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -185,11 +185,11 @@ class EmployerProfile3 extends StatelessWidget {
                   //height: 56,
                   child: FloatingActionButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, "DashBoard");
+                      Navigator.pushNamed(context, "EmployerDashboard");
                     },
                     child: Text(
                       "Save",
-                      style: TextStyle(color: Colors.white,fontSize: 16),
+                      style: TextStyle(fontFamily: "Poppins",color: Colors.white,fontSize: 16),
                     ),
                     backgroundColor: Color(0xff004673),
                   ),

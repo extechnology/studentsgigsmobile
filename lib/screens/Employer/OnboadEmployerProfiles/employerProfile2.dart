@@ -35,10 +35,12 @@ class EmpolyerProfile2 extends StatelessWidget {
         ),
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, "EmployerProfile3");
+            },
             child: Text(
               "Skip",
-              style: TextStyle(
+              style: TextStyle(fontFamily: "Poppins",
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                   color: Color(0xff313131)),
@@ -55,7 +57,7 @@ class EmpolyerProfile2 extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 17,left: 34),
-                child: Text("Add Your Company Logo",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+                child: Text("Add Your Company Logo",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               ),
               CircleAvatar(
                 radius: 65,
@@ -85,27 +87,27 @@ class EmpolyerProfile2 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30,),
-              Text("Company Name",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Text("Company Name",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 29),
                 child: CustomTextFormField(
                   //hintText: "Enter or paste your profile link",
                 ),
               ),
-              Text("Indusry Type",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Text("Indusry Type",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 29),
                 child: CustomTextFormField(
                  dropdownItems: [],
                 ),
-              ), Text("Company info",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              ), Text("Company info",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 29),
                 child: CustomTextFormField(
                   //hintText: "Enter or paste your profile link",
                 ),
               ),
-              Text("Country",style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
+              Text("Country",style: TextStyle(fontFamily: "Poppins",color: Color(0xff3F414E),fontWeight: FontWeight.w600,fontSize: 20),),
               Padding(
                 padding: const EdgeInsets.only(top: 13,bottom: 30),
                 child: CustomTextFormField(
@@ -124,7 +126,7 @@ class EmpolyerProfile2 extends StatelessWidget {
                       },
                       child: Text(
                         "Next",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(fontFamily: "Poppins",color: Colors.white),
                       ),
                       backgroundColor: Color(0xff0ffEB8125),
                     ),

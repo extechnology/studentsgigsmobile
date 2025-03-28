@@ -18,14 +18,14 @@ class EmployerProfile extends StatelessWidget {
               Text(
                 textAlign: TextAlign.center,
                 "Hire your ",
-                style: TextStyle(
+                style: TextStyle(fontFamily: "Poppins",
                     fontWeight: FontWeight.w600,
                     fontSize: 26,
                     color: Color(0xff3F414E)),
               ),
               Text(
                 "Preferred Categorie",
-                style: TextStyle(
+                style: TextStyle(fontFamily: "Poppins",
                     fontWeight: FontWeight.w600,
                     fontSize: 26,
                     color: Color(0xff3F414E)),
@@ -36,7 +36,7 @@ class EmployerProfile extends StatelessWidget {
                   child: Text(
                     textAlign: TextAlign.center,
                     "Explore hiring categories such as full-time roles, part-time & freelance work,internships & entry-level positions, and remote & hybrid opportunities to find the right talent for your business .",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         color: Color(0xff000000),
                         fontSize: 17,
                         fontWeight: FontWeight.w200,
@@ -78,7 +78,7 @@ class EmployerProfile extends StatelessWidget {
                             child: Text(
                               "Digital Marketing and Social Media",
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                 color: Colors.black,
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -104,7 +104,7 @@ class EmployerProfile extends StatelessWidget {
             },
             child: Text(
               "Next",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(fontFamily: "Poppins",color: Colors.white),
             ),
             backgroundColor: Color(0xff0ffEB8125),
           ),

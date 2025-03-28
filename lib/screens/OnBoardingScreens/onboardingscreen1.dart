@@ -10,7 +10,7 @@ class OnboardingScreen1 extends StatelessWidget {
       backgroundColor: Color(0xffF9F2ED),
       appBar: AppBar(
         leading: Container(
-          margin: EdgeInsets.only(left: 7,top: 10),
+          margin: EdgeInsets.only(left: 7, top: 10),
           height: 55,
           width: 55,
           decoration: BoxDecoration(
@@ -45,10 +45,13 @@ class OnboardingScreen1 extends StatelessWidget {
         ),
         actions: [
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, "LoginPage");
+              },
               child: Text(
                 "Skip",
                 style: TextStyle(
+                    fontFamily: "Poppins",
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Color(0xff313131)),
@@ -61,8 +64,7 @@ class OnboardingScreen1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.only(
-                  top: 40, bottom: 30),
+              padding: const EdgeInsets.only(top: 40, bottom: 30),
               child: Image.asset(
                 "assets/images/onboard/image (4) (1) 2.png",
                 width: 161,
@@ -105,6 +107,7 @@ class OnboardingScreen1 extends StatelessWidget {
                 child: Text(
                   "Next",
                   style: TextStyle(
+                      fontFamily: "Poppins",
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w600),
@@ -113,8 +116,11 @@ class OnboardingScreen1 extends StatelessWidget {
                     backgroundColor: Color(0xffEB8125),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(16))),
-                    fixedSize: Size(327, 56)),
+                    fixedSize: Size(MediaQuery.of(context).size.width, 56)),
               ),
+            ),
+            SizedBox(
+              height: 14,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -123,6 +129,7 @@ class OnboardingScreen1 extends StatelessWidget {
                 Text(
                   "Already have an account? ",
                   style: TextStyle(
+                    fontFamily: "Poppins",
                     color: Colors.black,
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
@@ -133,6 +140,7 @@ class OnboardingScreen1 extends StatelessWidget {
                     child: Text(
                       "Sign In",
                       style: TextStyle(
+                        fontFamily: "Poppins",
                         color: Color(0xff004673),
                         fontSize: 18,
                         fontWeight: FontWeight.w400,

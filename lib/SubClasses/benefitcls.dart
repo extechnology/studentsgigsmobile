@@ -28,7 +28,7 @@ class BenefitRow extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                     fontSize: 18, // Adjusted size
                     fontWeight: FontWeight.w400,
                     color: Colors.black,
@@ -36,7 +36,7 @@ class BenefitRow extends StatelessWidget {
                 ),
                 Text(
                   subtitle,
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Colors.black,

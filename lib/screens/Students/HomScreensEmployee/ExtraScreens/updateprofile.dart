@@ -14,7 +14,7 @@ class ProfileEditScreen extends StatelessWidget {
         flexibleSpace: Center(
           child: Text(
             "Update Profile",
-            style: TextStyle(
+            style: TextStyle(fontFamily: "Poppins",
                 fontWeight: FontWeight.w600,
                 fontSize: 20,
                 color: Color(0xff3F414E)),
@@ -83,7 +83,7 @@ class ProfileEditScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 26, bottom: 13),
                 child: Text(
                   "Name",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -99,7 +99,7 @@ class ProfileEditScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 26, bottom: 13),
                 child: Text(
                   "Contact Email",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -115,7 +115,7 @@ class ProfileEditScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 26, bottom: 13),
                 child: Text(
                   "Portfolio/LinkedIn Profile",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -131,7 +131,7 @@ class ProfileEditScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 26, bottom: 13),
                 child: Text(
                   "Country",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -147,7 +147,7 @@ class ProfileEditScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 26, bottom: 13),
                 child: Text(
                   "Contact Number",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -163,7 +163,7 @@ class ProfileEditScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 26, bottom: 13),
                 child: Text(
                   "About You",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                       color: Color(0xff3F414E)),
@@ -185,7 +185,7 @@ class ProfileEditScreen extends StatelessWidget {
                     },
                     child: Text(
                       "Save",
-                      style: TextStyle(color: Colors.white,fontSize: 16),
+                      style: TextStyle(fontFamily: "Poppins",color: Colors.white,fontSize: 16),
                     ),
                     backgroundColor: Color(0xff004673),
                   ),

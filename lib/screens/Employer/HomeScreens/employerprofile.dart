@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gigs/screens/Employer/HomeScreens/AdditionalHomeScreens/profileupdate.dart';
 
-
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class EmpolyerProfile extends StatelessWidget {
+  const EmpolyerProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   Text(
                     "Profile",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                         fontWeight: FontWeight.w600,
                         fontSize: 20,
                         color: Color(0xff3F414E)),
@@ -72,16 +73,15 @@ class ProfileScreen extends StatelessWidget {
                         SizedBox(
                           width: 8,
                         ),
-                        Icon(
-                          Icons.person,
+                        Icon(Icons.work_outline_outlined,
                           color: Color(0xffEB8125),
                         ),
                         SizedBox(
                           width: 8,
                         ),
                         Text(
-                          "Personal Info",
-                          style: TextStyle(
+                          "Comopany Info",
+                          style: TextStyle(fontFamily: "Poppins",
                               color: Color(0xff32343E),
                               fontWeight: FontWeight.w400,
                               fontSize: 16),
@@ -89,7 +89,7 @@ class ProfileScreen extends StatelessWidget {
                         Spacer(),
                         IconButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, "ProfileEditScreen");
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => EmployerProfileUpdate(),));
                             },
                             icon: Icon(
                               Icons.arrow_forward_ios,
@@ -124,7 +124,7 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             Text(
                               "Notifications",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   color: Color(0xff32343E),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 16),
@@ -155,7 +155,7 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             Text(
                               "Payment Method",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   color: Color(0xff32343E),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 16),
@@ -198,7 +198,7 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             Text(
                               "FAQs",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   color: Color(0xff32343E),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 16),
@@ -230,7 +230,7 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             Text(
                               "Premium",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   color: Color(0xff32343E),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 16),
@@ -264,7 +264,7 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             Text(
                               "Settings",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   color: Color(0xff32343E),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 16),
@@ -305,7 +305,7 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         Text(
                           "Log out",
-                          style: TextStyle(
+                          style: TextStyle(fontFamily: "Poppins",
                               color: Color(0xff32343E),
                               fontWeight: FontWeight.w400,
                               fontSize: 16),

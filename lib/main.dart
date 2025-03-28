@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:gigs/SubClasses/CustomField.dart';
+import 'package:gigs/screens/Employer/HomeScreens/employerhomescreen.dart';
 import 'package:gigs/screens/Employer/OnboadEmployerProfiles/employerProfile.dart';
 import 'package:gigs/screens/Employer/OnboadEmployerProfiles/employerProfile2.dart';
 import 'package:gigs/screens/Employer/OnboadEmployerProfiles/employerProfile3.dart';
+import 'package:gigs/screens/Employer/employerdashboard.dart';
 import 'package:gigs/screens/OnBoardingScreens/onboardingscreen1.dart';
 import 'package:gigs/screens/OnBoardingScreens/onboardingscreen2.dart';
+import 'package:gigs/screens/Students/HomScreensEmployee/ExtraScreens/gigsdetail.dart';
+import 'package:gigs/screens/Students/HomScreensEmployee/ExtraScreens/premiumscreen.dart';
+import 'package:gigs/screens/Students/HomScreensEmployee/ExtraScreens/updateprofile.dart';
+import 'package:gigs/screens/Students/HomScreensEmployee/favorites.dart';
+import 'package:gigs/screens/Students/HomScreensEmployee/jobpost.dart';
+import 'package:gigs/screens/Students/HomScreensEmployee/mygigs.dart';
+import 'package:gigs/screens/Students/HomScreensEmployee/profilescreen.dart';
+import 'package:gigs/screens/Students/HomScreensEmployee/searchscreen.dart';
 import 'package:gigs/screens/Students/StudentProfileScreens/onboardProfile.dart';
 import 'package:gigs/screens/Students/StudentProfileScreens/onboardProfile2.dart';
 import 'package:gigs/screens/Students/StudentProfileScreens/onboardingProfile3.dart';
-import 'package:gigs/screens/Students/dashboeardscren.dart';
-import 'package:gigs/screens/Students/dashboradscreens/extradashboardscreen/gigsdetail.dart';
-import 'package:gigs/screens/Students/dashboradscreens/extradashboardscreen/premiumscreen.dart';
-import 'package:gigs/screens/Students/dashboradscreens/extradashboardscreen/updateprofile.dart';
-import 'package:gigs/screens/Students/dashboradscreens/favorites.dart';
-import 'package:gigs/screens/Students/dashboradscreens/mygigs.dart';
-import 'package:gigs/screens/Students/dashboradscreens/profilescreen.dart';
-import 'package:gigs/screens/Students/dashboradscreens/searchscreen.dart';
+import 'package:gigs/screens/Students/homescreen.dart';
 import 'package:gigs/screens/loginpage.dart';
 import 'package:gigs/screens/optionscreen.dart';
 import 'package:gigs/screens/register.dart';
@@ -53,9 +57,11 @@ class MyApp extends StatelessWidget {
         "ProfileEditScreen": (context) => ProfileEditScreen(),
         "GigsDetailScreen": (context) => GigsDetailScreen(),
         "PremiumScreen": (context) => PremiumScreen(),
+        "EmployerDashboard":(context)=> EmployerDashboard(),
+        "EmployerHome": (context)=> EmployerHome()
       },
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: ProfileScreen(),
     );
   }
 }

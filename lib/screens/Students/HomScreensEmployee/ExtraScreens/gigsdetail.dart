@@ -17,7 +17,7 @@ class GigsDetailScreen extends StatelessWidget {
           },
           child: Text(
             "Apply",
-            style: TextStyle(color: Colors.white,fontSize: 16),
+            style: TextStyle(fontFamily: "Poppins",color: Colors.white,fontSize: 16),
           ),
           backgroundColor: Color(0xff004673),
         ),
@@ -73,7 +73,7 @@ class GigsDetailScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Frontend Developer",
-                      style: TextStyle(
+                      style: TextStyle(fontFamily: "Poppins",
                           color: Color(0xff3F414E),
                           fontSize: 22,
                           fontWeight: FontWeight.w600),
@@ -102,7 +102,7 @@ class GigsDetailScreen extends StatelessWidget {
                             ),
                             Text(
                               "Kannur, Kerala, India",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xff000000)),
@@ -129,7 +129,7 @@ class GigsDetailScreen extends StatelessWidget {
                               ),
                               child: const Text(
                                 "Online",
-                                style: TextStyle(
+                                style: TextStyle(fontFamily: "Poppins",
                                     fontSize: 11, fontWeight: FontWeight.w400),
                               ),
                             ),
@@ -147,7 +147,7 @@ class GigsDetailScreen extends StatelessWidget {
                             ),
                             Text(
                               "Full Time",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xff000000)),
@@ -166,7 +166,7 @@ class GigsDetailScreen extends StatelessWidget {
                             ),
                             Text(
                               "25yr - 30yr",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xff000000)),
@@ -184,7 +184,7 @@ class GigsDetailScreen extends StatelessWidget {
                             ),
                             Text(
                               "₹30,000 - Project Based",
-                              style: TextStyle(
+                              style: TextStyle(fontFamily: "Poppins",
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0xff000000)),
@@ -197,7 +197,7 @@ class GigsDetailScreen extends StatelessWidget {
                 ),
                 Text(
                   "About Company",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       color: Color(0xff000000),
                       fontWeight: FontWeight.w600,
                       fontSize: 16),
@@ -207,14 +207,14 @@ class GigsDetailScreen extends StatelessWidget {
                 ),
                 Text(
                   "At Ex-Media, our mission is to revolutionize the digital landscape by delivering innovative solutions that empower businesses to thrive in a rapidly changing world. With a strong focus on social responsibility, our impact extends beyond the screen, driving positive change and fostering meaningful connections within our communities.",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                       color: Color(0xff000000)),
                 ),
                 Text(
                   "The Role",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       color: Color(0xff000000),
                       fontWeight: FontWeight.w600,
                       fontSize: 16),
@@ -224,14 +224,14 @@ class GigsDetailScreen extends StatelessWidget {
                 ),
                 Text(
                   "As a Front End Developer at Ex-Media, you will play a pivotal role in shaping the user experience of our digital products, crafting intuitive and engaging interfaces that delight our customers and drive business success.",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                       color: Color(0xff000000)),
                 ),
                 Text(
                   "What You’ll Need",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       color: Color(0xff000000),
                       fontWeight: FontWeight.w600,
                       fontSize: 16),
@@ -242,7 +242,7 @@ class GigsDetailScreen extends StatelessWidget {
                 Text(
                   "Proficiency in JavaScript and HTML/CSSExperience with Front-end Frameworks Strong Understanding of Responsive Web Design",
                   style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 14,fontFamily: "Poppins",
                       fontWeight: FontWeight.w300,
                       color: Color(0xff000000)),
                 ),

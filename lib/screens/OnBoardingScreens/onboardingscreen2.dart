@@ -45,10 +45,12 @@ class OnboardingScreen2 extends StatelessWidget {
         ),
         actions: [
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, "LoginPage");
+              },
               child: Text(
                 "Skip",
-                style: TextStyle(
+                style: TextStyle(fontFamily: "Poppins",
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Color(0xff313131)),
@@ -73,7 +75,7 @@ class OnboardingScreen2 extends StatelessWidget {
                   BenefitRow(
                     leading: CircleAvatar(
                       backgroundColor: Color(0xffE3E3E3),
-                      child: Text("1"),
+                      child: Text("1",style: TextStyle(fontFamily: "Poppins",),),
                       radius: 22.5,
                     ),
                     title: "Create a profile, showcase your skills",
@@ -108,7 +110,7 @@ class OnboardingScreen2 extends StatelessWidget {
                 },
                 child: Text(
                   "Get Started",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w600),
@@ -128,7 +130,7 @@ class OnboardingScreen2 extends StatelessWidget {
                 children: [
                   Text(
                     "Already have an account? ",
-                    style: TextStyle(
+                    style: TextStyle(fontFamily: "Poppins",
                       color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
@@ -140,7 +142,7 @@ class OnboardingScreen2 extends StatelessWidget {
                       },
                       child: Text(
                         "Sign In",
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: "Poppins",
                           color: Color(0xffEB8125),
                           fontSize: 18,
                           fontWeight: FontWeight.w400,

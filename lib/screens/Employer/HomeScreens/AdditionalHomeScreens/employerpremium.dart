@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/SubClasses/premiumplans/premiumplan1.dart';
 import 'package:gigs/SubClasses/premiumplans/PremiumPlan3.dart';
+import 'package:gigs/SubClasses/premiumplans/premiumplan1.dart';
 import 'package:gigs/SubClasses/premiumplans/premiumplan2.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class PremiumScreen extends StatelessWidget {
-   PremiumScreen({super.key});
+class EmployerPremium extends StatelessWidget {
+   EmployerPremium({super.key});
   final controller = PageController(initialPage: 0);
+
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +50,10 @@ class PremiumScreen extends StatelessWidget {
                 shaderCallback: (Rect bounds) {
                   return LinearGradient(
                     begin: Alignment.topLeft,
-                    end: Alignment.topRight,
+                    end: Alignment.bottomRight,
                     colors: [
                       Color(0xffEB8125),
-                      Color(0xff806649),
+                      Color(0xffc55a5f),
                       Color(0xff004673)
                     ],
                   ).createShader(bounds);
@@ -60,7 +61,7 @@ class PremiumScreen extends StatelessWidget {
                 blendMode: BlendMode.srcIn,
                 child: Text(
                   "Unlock Your Full Potential With Premium",
-                  style: TextStyle(
+                  style: TextStyle(fontFamily: "Poppins",
                       fontSize: 24, fontWeight: FontWeight.w700, height: 1.5),
                   textAlign: TextAlign.center,
                 ),
@@ -69,8 +70,8 @@ class PremiumScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   "Acces exclusive job oppotunities, build your resume, and \nstand out to top employers",
-                  style: TextStyle(
-                      fontSize: 10,
+                  style: TextStyle(fontFamily: "Poppins",
+                      fontSize: 12,
                       fontWeight: FontWeight.w400,
                       color: Color(0xff000000),
                       height: 2),
@@ -79,6 +80,33 @@ class PremiumScreen extends StatelessWidget {
               ),
               SizedBox(
                 height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white70,
+                  ),
+
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        "Curent Plans :",style: TextStyle(fontFamily: "Poppins",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff000000),
+                          height: 2),),
+                      Text("Standard",style: TextStyle(fontFamily: "Poppins",
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xff6427ce),),)
+                    ],
+                  ),
+                ),
               ),
               SizedBox(
                 width: double.infinity,
