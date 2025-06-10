@@ -1,32 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:gigs/SubClasses/CustomField.dart';
-import 'package:gigs/screens/Employer/HomeScreens/employerhomescreen.dart';
-import 'package:gigs/screens/Employer/OnboadEmployerProfiles/employerProfile.dart';
-import 'package:gigs/screens/Employer/OnboadEmployerProfiles/employerProfile2.dart';
-import 'package:gigs/screens/Employer/OnboadEmployerProfiles/employerProfile3.dart';
-import 'package:gigs/screens/Employer/employerdashboard.dart';
-import 'package:gigs/screens/OnBoardingScreens/onboardingscreen1.dart';
-import 'package:gigs/screens/OnBoardingScreens/onboardingscreen2.dart';
-import 'package:gigs/screens/Students/HomScreensEmployee/ExtraScreens/gigsdetail.dart';
-import 'package:gigs/screens/Students/HomScreensEmployee/ExtraScreens/premiumscreen.dart';
-import 'package:gigs/screens/Students/HomScreensEmployee/ExtraScreens/updateprofile.dart';
-import 'package:gigs/screens/Students/HomScreensEmployee/favorites.dart';
-import 'package:gigs/screens/Students/HomScreensEmployee/jobpost.dart';
-import 'package:gigs/screens/Students/HomScreensEmployee/mygigs.dart';
-import 'package:gigs/screens/Students/HomScreensEmployee/profilescreen.dart';
-import 'package:gigs/screens/Students/HomScreensEmployee/searchscreen.dart';
-import 'package:gigs/screens/Students/StudentProfileScreens/onboardProfile.dart';
-import 'package:gigs/screens/Students/StudentProfileScreens/onboardProfile2.dart';
-import 'package:gigs/screens/Students/StudentProfileScreens/onboardingProfile3.dart';
-import 'package:gigs/screens/Students/homescreen.dart';
-import 'package:gigs/screens/loginpage.dart';
-import 'package:gigs/screens/optionscreen.dart';
-import 'package:gigs/screens/register.dart';
-import 'screens/splashscreen.dart';
-import 'screens/welcomescreen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gigs/bloc/google_signup_bloc/bloclogic.dart';
+import 'package:gigs/bloc/google_signup_bloc/googleauthrepository.dart';
+import 'package:gigs/Employer/HomeScreens/employerhomescreen.dart';
+import 'package:gigs/Employer/OnBoardingScreens/OnboadEmployerProfiles/employerProfile.dart';
+import 'package:gigs/Employer/OnBoardingScreens/OnboadEmployerProfiles/employerProfile2.dart';
+import 'package:gigs/Employer/OnBoardingScreens/OnboadEmployerProfiles/employerProfile3.dart';
+import 'package:gigs/Employer/HomeScreens/employerdashboard.dart';
+import 'package:gigs/Employer/OnBoardingScreens/onboardingscreen1.dart';
+import 'package:gigs/Employer/OnBoardingScreens/onboardingscreen2.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/Profile_ExtraScreens/additional_info.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/Profile_ExtraScreens/EducationDetails/educationalInfo.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/Profile_ExtraScreens/EducationDetails/educationalInformationAdd.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/Profile_ExtraScreens/workPreference.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/MoreScreens/gigsdetail.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/MoreScreens/premiumscreen.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/Profile_ExtraScreens/updateprofile.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/favorites.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/mygigs.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/profilescreen.dart';
+import 'package:gigs/Student/Students/HomScreensEmployee/searchscreen.dart';
+import 'package:gigs/Student/Students/StudentProfileScreens/onboardProfile.dart';
+import 'package:gigs/Student/Students/StudentProfileScreens/onboardProfile2.dart';
+import 'package:gigs/Student/Students/StudentProfileScreens/onboardingProfile3.dart';
+import 'package:gigs/Student/Students/homescreen.dart';
+import 'package:gigs/Commonscreens/loginpage.dart';
+import 'package:gigs/Commonscreens/optionscreen.dart';
+import 'package:gigs/Commonscreens/register.dart';
+import 'Student/Students/HomScreensEmployee/Profile_ExtraScreens/Skills/Experience.dart/experience_show.dart';
+import 'Student/Students/HomScreensEmployee/Profile_ExtraScreens/Skills/Experience.dart/ecperience.dart';
+import 'Student/Students/HomScreensEmployee/Profile_ExtraScreens/categoriesed.dart';
+import 'Student/Students/HomScreensEmployee/Profile_ExtraScreens/language.dart';
+import 'Student/Students/HomScreensEmployee/Profile_ExtraScreens/Skills/technicalSkill.dart';
+import 'Student/Students/HomScreensEmployee/homepage.dart';
+import 'Student/Students/HomScreensEmployee/userplan.dart';
+import 'Commonscreens/splashscreen.dart';
+import 'Commonscreens/welcomescreen.dart';
 
 void main() {
-  runApp(MyApp());
+  final GoogleAuthRepository repository = GoogleAuthRepository();
+
+  runApp(
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => GoogleAuthBloc(repository)),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -41,8 +62,12 @@ class MyApp extends StatelessWidget {
         "WelcomeScreen": (context) => Welcomescreen(),
         "OnbardingScreen1": (context) => OnboardingScreen1(),
         "OnboardingScreen2": (context) => OnboardingScreen2(),
-        "LoginPage": (context) => LoginPage(),
-        "RegisterPage": (context) => RegisterPage(),
+        "LoginPage": (context) => LoginPage(
+              userType: '',
+            ),
+        "RegisterPage": (context) => RegisterPage(
+              userType: '',
+            ),
         "OnboardProfile": (context) => OnboardProfile(),
         "OnboardProfile2": (context) => OnboardProfile2(),
         "OnboardProfile3": (context) => OnboardProfile3(),
@@ -55,13 +80,24 @@ class MyApp extends StatelessWidget {
         "SearchScreen": (context) => SearchScreen(),
         "ProfileScreen": (context) => ProfileScreen(),
         "ProfileEditScreen": (context) => ProfileEditScreen(),
+        "WorkPreference": (context) => WorkPreference(),
         "GigsDetailScreen": (context) => GigsDetailScreen(),
         "PremiumScreen": (context) => PremiumScreen(),
-        "EmployerDashboard":(context)=> EmployerDashboard(),
-        "EmployerHome": (context)=> EmployerHome()
+        "EmployerDashboard": (context) => EmployerDashboard(),
+        "EmployerHome": (context) => EmployerHome(),
+        "LanguageDropdown": (context) => LanguageDropdown(),
+        "EducationalInfoSection": (context) => EducationalInfoSection(),
+        "EducationPage": (context) => EducationPage(),
+        "Technicalskill": (context) => Technicalskill(),
+        "CategoryDropdownFormField": (context) => CategoryDropdownFormField(),
+        "ExperinceScreen": (context) => ExperinceScreen(),
+        "ShowExperience": (context) => ShowExperience(),
+        "AdditionalInformationScreen": (context) =>
+            AdditionalInformationScreen(),
+        "PlanUsagePage": (context) => PlanUsagePage(),
       },
       debugShowCheckedModeBanner: false,
-      home: ProfileScreen(),
+      home: OptionScreen(),
     );
   }
 }

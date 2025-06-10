@@ -20,7 +20,7 @@ class Gigs extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.pushNamed(context, "GigsDetailScreen"),
       child: Container(
-        height: 250,
+        height: 200,
         width: screenWidth * 0.9,
         padding: EdgeInsets.all(screenWidth * 0.05),
         decoration: BoxDecoration(

@@ -15,28 +15,33 @@ class BenefitRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.symmetric(vertical: 1),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start, // Align elements properly
         children: [
           leading, // Can be an Icon or CircleAvatar
           SizedBox(width: 10),
-          Expanded( // Ensures text wraps properly
+          Expanded(
+            // Ensures text wraps properly
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: TextStyle(fontFamily: "Poppins",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontFamily: "Poppins",
                     fontSize: 18, // Adjusted size
                     fontWeight: FontWeight.w400,
                     color: Colors.black,
                   ),
                 ),
                 Text(
+                  textAlign: TextAlign.start,
                   subtitle,
-                  style: TextStyle(fontFamily: "Poppins",
+                  style: TextStyle(
+                    fontFamily: "Poppins",
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Colors.black,
@@ -51,4 +56,3 @@ class BenefitRow extends StatelessWidget {
     );
   }
 }
-

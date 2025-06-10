@@ -25,28 +25,32 @@ class CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15), // Border radius here
+    return Card(
+      //margin: EdgeInsets.only(bottom: 16),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15), // Border radius here
+      ),
+      //elevation: 2, // Shadow depth
+      color: Colors.white,
+      child: ListTile(
+        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+        leading: Icon(iconLeading, color: iconColorLeading),
+        title: Text(
+          title!,
+          style: TextStyle(
+            fontFamily: "Poppins",
+            color: Color(0xff32343E),
+            fontWeight: FontWeight.w400,
+            fontSize: 16,
           ),
-          elevation: 4, // Shadow depth
-          color: Colors.white,
-          child: ListTile(
-            leading: Icon(iconLeading, color: iconColorLeading),
-            title: Text(
-              title!,
-              style: TextStyle(
-                fontFamily: "Poppins",
-                color: Color(0xff32343E),
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-              ),
-            ),
-            trailing: Icon(iconTrailing,color: iconColoTrailing,),
-            onTap: onTap,
-          ),
-        ));
+        ),
+        trailing: Icon(
+          size: 16,
+          iconTrailing,
+          color: iconColoTrailing,
+        ),
+        onTap: onTap,
+      ),
+    );
   }
 }
