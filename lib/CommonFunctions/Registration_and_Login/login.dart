@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:gigs/StudentFunctions/Profile_Update/PersonalInfo_Update/employee_detailsFeatching.dart';
+import 'package:gigs/Student/StudentFunctions/Profile_Update/PersonalInfo_Update/employee_detailsFeatching.dart';
 import 'package:http/http.dart' as http;
 
 import '../../ApiClasses/apiconstant.dart';

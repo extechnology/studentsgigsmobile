@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:io'; // For SocketException
 import 'package:flutter/material.dart'; // For ScaffoldMessenger
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:gigs/ApiClasses/apiconstant.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart'; // For debugPrint
@@ -34,8 +35,7 @@ Future<Map<String, dynamic>?> signInWithGoogle(BuildContext context) async {
     // Prepare request to your backend
     final response = await http
         .post(
-          Uri.parse(
-              "https://server.studentsgigs.com/api/employee/api/google-auth/"),
+          Uri.parse("${ApiConstants.baseUrl}/employee/api/google-auth/"),
           headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",

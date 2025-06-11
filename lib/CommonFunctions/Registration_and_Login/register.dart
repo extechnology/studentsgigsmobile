@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:gigs/ApiClasses/apiconstant.dart';
 import 'package:http/http.dart' as http;
 
 import '../Other/otp_verification.dart';
@@ -73,9 +74,8 @@ Future<void> registerUser(
     // Step 3: Register the user only if OTP is verified
     if (isVerified == true) {
       final Uri registerUrl = userType == "student"
-          ? Uri.parse(
-              "https://ba5b-103-153-104-222.ngrok-free.app/api/employee/user/register/")
-          : Uri.parse("https://your-api-url/api/employer/final-register/");
+          ? Uri.parse("${ApiConstants.baseUrl}api/employee/user/register/")
+          : Uri.parse("${ApiConstants.baseUrl}api/employer/final-register/");
 
       final response = await http.post(
         registerUrl,
@@ -115,8 +115,7 @@ Future<Map<String, dynamic>> sendOTP(String email, String username,
     String password, String confirmPassword) async {
   try {
     final response = await http.post(
-      Uri.parse(
-          "https://c004-103-147-208-170.ngrok-free.app/api/employee/user/register/"),
+      Uri.parse("${ApiConstants.baseUrl}api/employee/user/register/"),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         "email": email,
@@ -158,8 +157,7 @@ Future<bool> verifyOTP(
   try {
     final response = await http
         .post(
-          Uri.parse(
-              "https://c004-103-147-208-170.ngrok-free.app/api/employee/verify-otp/"),
+          Uri.parse("${ApiConstants.baseUrl}api/employee/verify-otp/"),
           headers: {'Content-Type': 'application/json'},
           body: jsonEncode({
             "email": email,
@@ -183,8 +181,7 @@ Future<bool> verifyOTP(
 Future<void> resendOTP(String email) async {
   try {
     final response = await http.post(
-      Uri.parse(
-          "https://2e5c-103-154-36-88.ngrok-free.app/api/employee/resend-otp/"),
+      Uri.parse("${ApiConstants.baseUrl}api/employee/resend-otp/"),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({"email": email}),
     );
